@@ -6,8 +6,8 @@ Here a list of things the project should need.
 
 An image to run the API with cron.
 
-- Makefile
-- Docker compose
+- x Makefile
+- x Docker compose
 - Symfony installation
 - Symfony hello world test
 - github workflows
