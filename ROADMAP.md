@@ -8,7 +8,7 @@ An image to run the API with cron.
 
 - x Makefile
 - x Docker compose
-- Symfony installation
+- x Symfony installation
 - Symfony hello world test
 - github workflows
     - Automatic testing
