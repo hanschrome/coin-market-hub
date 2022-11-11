@@ -1,4 +1,4 @@
-# Market prices API for cryptocurrencies
+# CoinMarketHub: The market prices API for cryptocurrencies
 
 This API collects and stores each minute the market prices of cryptocurrencies in Binance.
 
@@ -7,6 +7,8 @@ This API collects and stores each minute the market prices of cryptocurrencies i
 Binance has limited requests to the API, so this API will be used as cache system for other tools.
 
 Also, this system will store each minute the prices so a history will be created.
+
+It also works as an abstract layer.
 
 ## How to set up
 
