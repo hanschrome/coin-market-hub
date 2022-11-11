@@ -9,7 +9,7 @@ An image to run the API with cron.
 - x Makefile
 - x Docker compose
 - x Symfony installation
-- Symfony hello world test
+- x Symfony hello world test
 - github workflows
     - Automatic testing
 - Command with cron for collect data in database
