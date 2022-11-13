@@ -1,4 +1,4 @@
-name: Build & Push Testing
+name: Build & Push Base image
 on:
   push:
     branches: [ main ]
@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Build & Push Testing stage
+      - name: Build & Push Base image
         run: |
           echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u "hanschrome" --password-stdin
-          docker build -f .docker/images/php-fpm/test/Dockerfile -t hanschrome/cmp-php-fpm-base:latest .
+          docker build -f .docker/images/php-fpm/base/Dockerfile -t hanschrome/cmp-php-fpm-base:latest .
           docker push hanschrome/cmp-php-fpm-base:latest
