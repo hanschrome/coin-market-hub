@@ -18,4 +18,12 @@ RUN pecl install mcrypt-1.0.5
 RUN docker-php-ext-install pdo_mysql bcmath gd
 RUN docker-php-ext-enable xdebug imagick mcrypt
 
+RUN apt-get update && apt-get install -y \
+    zlib1g-dev \
+    libzip-dev \
+    unzip
+
+RUN docker-php-ext-install zip
+
+
 RUN rm -rf /var/lib/apt/lists/*
