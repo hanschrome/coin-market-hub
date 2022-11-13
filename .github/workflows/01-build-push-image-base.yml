@@ -1,7 +1,7 @@
 name: Build & Push Base image
 on:
   push:
-    branches: [ main ]
+    branches: [ base ]
 jobs:
   build:
     runs-on: ubuntu-latest
