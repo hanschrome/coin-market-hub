@@ -8,3 +8,5 @@ ADD ./composer.phar /var/www/html
 
 # Install dependencies
 RUN cd /var/www/html && php composer.phar install
+
+RUN php bin/phpunit tests/unit
