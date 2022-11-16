@@ -11,6 +11,7 @@ class PricesController
     #[Route('/api/v1/prices')]
     public function get(): Response
     {
+
         return new JsonResponse([
             'binance' => []
         ]);

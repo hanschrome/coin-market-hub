@@ -2,18 +2,24 @@
 
 namespace CryptoMarketPlaces\Aplication\Prices;
 
-use CryptoMarketPlaces\Domain\Prices\IPricesRepository;
-use CryptoMarketPlaces\Domain\Prices\IPricesService;
+use App\Repository\DoctrinePricesRepository;
+use CryptoMarketPlaces\Infrastructure\Binance\BinancePricesRepository;
 
 class LoadPricesFromAPIAction
 {
-    public function __invoke(
-        IPricesService $pricesService,
-        IPricesRepository $originRepository
-    ): void
-    {
-        $prices = $originRepository->getPrices();
+    private BinancePricesRepository $binancePricesRepository;
+    private DoctrinePricesRepository $doctrinePricesRepository;
 
-        $pricesService->savePrices($prices);
+    public function __construct(BinancePricesRepository $systemPricesService, DoctrinePricesRepository $doctrinePricesRepository)
+    {
+        $this->binancePricesRepository = $systemPricesService;
+        $this->doctrinePricesRepository = $doctrinePricesRepository;
+    }
+
+    public function __invoke(): void
+    {
+        $prices = $this->binancePricesRepository->getPrices();
+
+        $this->doctrinePricesRepository->savePrices($prices);
     }
 }
