@@ -1,9 +1,9 @@
 <?php
 
-namespace CryptoMarketPlaces\Aplication\Prices;
+namespace CryptoMarketPrices\Aplication\Prices;
 
 use App\Repository\DoctrinePricesRepository;
-use CryptoMarketPlaces\Infrastructure\Binance\BinancePricesRepository;
+use CryptoMarketPrices\Infrastructure\Binance\BinancePricesRepository;
 
 class LoadPricesFromAPIAction
 {

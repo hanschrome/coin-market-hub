@@ -3,7 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\DoctrinePricesRepository;
-use CryptoMarketPlaces\Domain\Prices\IPrices;
+use CryptoMarketPrices\Domain\Prices\IPrices;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: DoctrinePricesRepository::class)]

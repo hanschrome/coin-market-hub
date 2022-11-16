@@ -1,10 +1,10 @@
 <?php
 
-namespace CryptoMarketPlaces\Aplication\Prices;
+namespace CryptoMarketPrices\Aplication\Prices;
 
-use CryptoMarketPlaces\Domain\Prices\IPrices;
-use CryptoMarketPlaces\Domain\Prices\IPricesRepository;
-use CryptoMarketPlaces\Domain\Prices\IPricesService;
+use CryptoMarketPrices\Domain\Prices\IPrices;
+use CryptoMarketPrices\Domain\Prices\IPricesRepository;
+use CryptoMarketPrices\Domain\Prices\IPricesService;
 
 class SystemPricesService implements IPricesService
 {

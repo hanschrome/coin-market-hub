@@ -1,6 +1,6 @@
 <?php
 
-namespace CryptoMarketPlaces\Domain\Prices;
+namespace CryptoMarketPrices\Domain\Prices;
 
 interface IPricesService
 {

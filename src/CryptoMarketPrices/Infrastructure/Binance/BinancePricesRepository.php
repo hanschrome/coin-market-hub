@@ -1,10 +1,10 @@
 <?php
 
-namespace CryptoMarketPlaces\Infrastructure\Binance;
+namespace CryptoMarketPrices\Infrastructure\Binance;
 
 use App\Entity\Prices;
-use CryptoMarketPlaces\Domain\Prices\IPrices;
-use CryptoMarketPlaces\Domain\Prices\IPricesRepository;
+use CryptoMarketPrices\Domain\Prices\IPrices;
+use CryptoMarketPrices\Domain\Prices\IPricesRepository;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

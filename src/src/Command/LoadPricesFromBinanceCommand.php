@@ -4,8 +4,8 @@ namespace App\Command;
 
 use App\Entity\Prices;
 use App\Repository\DoctrinePricesRepository;
-use CryptoMarketPlaces\Aplication\Prices\LoadPricesFromAPIAction;
-use CryptoMarketPlaces\Infrastructure\Binance\BinancePricesRepository;
+use CryptoMarketPrices\Aplication\Prices\LoadPricesFromAPIAction;
+use CryptoMarketPrices\Infrastructure\Binance\BinancePricesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;

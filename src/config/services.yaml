@@ -19,7 +19,7 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
-    CryptoMarketPlaces\:
+    CryptoMarketPrices\:
         resource: '../CryptoMarketPrices'
         autowire: true
 
