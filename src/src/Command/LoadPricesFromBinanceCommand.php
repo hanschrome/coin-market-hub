@@ -15,18 +15,15 @@ use Symfony\Component\Console\Output\OutputInterface;
 #[AsCommand(name: 'prices:load-binance')]
 class LoadPricesFromBinanceCommand extends Command
 {
-    private EntityManagerInterface $entityManager;
     private BinancePricesRepository $binancePricesRepository;
     private DoctrinePricesRepository $doctrinePricesRepository;
 
     public function __construct(
-        EntityManagerInterface  $entityManager,
         BinancePricesRepository $binancePricesRepository,
         DoctrinePricesRepository $doctrinePricesRepository
     )
     {
         parent::__construct('prices:load-binance');
-        $this->entityManager = $entityManager;
         $this->binancePricesRepository = $binancePricesRepository;
         $this->doctrinePricesRepository = $doctrinePricesRepository;
     }

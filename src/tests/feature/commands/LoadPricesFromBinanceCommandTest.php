@@ -2,6 +2,7 @@
 
 namespace App\Tests\feature\commands;
 
+use App\Command\LoadPricesFromBinanceCommand;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\Console\Tester\CommandTester;
@@ -13,7 +14,7 @@ class LoadPricesFromBinanceCommandTest extends KernelTestCase
         $kernel = self::bootKernel();
         $application = new Application($kernel);
 
-        $command = $application->find('prices:load-binance');
+        $command = $application->find(LoadPricesFromBinanceCommand::getDefaultName());
 
         $commandTester = new CommandTester($command);
 
