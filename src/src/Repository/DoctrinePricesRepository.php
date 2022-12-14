@@ -10,9 +10,12 @@ use Doctrine\Persistence\ManagerRegistry;
 
 class DoctrinePricesRepository extends ServiceEntityRepository implements IPricesRepository
 {
+    private ManagerRegistry $managerRegistry;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Prices::class);
+        $this->managerRegistry = $registry;
     }
 
     public function getPrices(): IPrices
@@ -22,6 +25,8 @@ class DoctrinePricesRepository extends ServiceEntityRepository implements IPrice
 
     public function savePrices(IPrices $prices): void
     {
-        // TODO: Implement savePrices() method.
+        $manager = $this->managerRegistry->getManager();
+        $manager->persist($prices);
+        $manager->flush();
     }
 }

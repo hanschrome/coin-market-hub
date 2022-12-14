@@ -14,7 +14,7 @@ class Prices implements IPrices
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private string $id;
+    private int $id;
 
     #[ORM\Column]
     private string $uuid;
@@ -29,9 +29,9 @@ class Prices implements IPrices
     private \DateTime $created_at;
 
     /**
-     * @return string
+     * @return int
      */
-    public function getId(): string
+    public function getId(): int
     {
         return $this->id;
     }

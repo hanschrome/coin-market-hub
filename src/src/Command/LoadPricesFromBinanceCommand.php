@@ -21,8 +21,7 @@ class LoadPricesFromBinanceCommand extends Command
     public function __construct(
         BinancePricesRepository $binancePricesRepository,
         DoctrinePricesRepository $doctrinePricesRepository
-    )
-    {
+    ) {
         parent::__construct('prices:load-binance');
         $this->binancePricesRepository = $binancePricesRepository;
         $this->doctrinePricesRepository = $doctrinePricesRepository;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Tests\feature\commands;
 
 use App\Command\LoadPricesFromBinanceCommand;

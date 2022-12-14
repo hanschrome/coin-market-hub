@@ -18,15 +18,14 @@ class BinancePricesRepository extends ServiceEntityRepository implements IPrices
 
     public function getPrices(): IPrices
     {
-        // @todo make request to ask prices
-        // @todo map them to prices object
+        $pricesContent = file_get_contents(BinanceAPI::HOST . BinanceAPI::TICKER_PRICE_V3);
 
         $prices = new Prices();
 
         $prices->setUuid(Uuid::v4());
         $prices->setProviderUuid(Prices::PRICES_PROVIDER_BINANCE);
         $prices->setCreatedAt(new \DateTime());
-        $prices->setRawPrices('{}');
+        $prices->setRawPrices($pricesContent);
 
         return $prices;
     }
