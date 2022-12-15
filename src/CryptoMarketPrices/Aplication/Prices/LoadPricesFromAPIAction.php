@@ -1,16 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace CryptoMarketPrices\Aplication\Prices;
 
-use App\Repository\DoctrinePricesRepository;
-use CryptoMarketPrices\Infrastructure\Binance\BinancePricesRepository;
+use CryptoMarketPrices\Domain\Prices\IPricesRepository;
 
 class LoadPricesFromAPIAction
 {
-    private BinancePricesRepository $binancePricesRepository;
-    private DoctrinePricesRepository $doctrinePricesRepository;
+    private IPricesRepository $binancePricesRepository;
+    private IPricesRepository $doctrinePricesRepository;
 
-    public function __construct(BinancePricesRepository $systemPricesService, DoctrinePricesRepository $doctrinePricesRepository)
+    public function __construct(IPricesRepository $systemPricesService, IPricesRepository $doctrinePricesRepository)
     {
         $this->binancePricesRepository = $systemPricesService;
         $this->doctrinePricesRepository = $doctrinePricesRepository;
