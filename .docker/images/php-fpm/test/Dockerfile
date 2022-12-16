@@ -9,4 +9,4 @@ ADD ./composer.phar /var/www/html
 # Install dependencies
 RUN cd /var/www/html && php composer.phar install
 
-CMD ["php", "bin/phpunit", "src/tests/Unit"]
+CMD ["php", "bin/phpunit", "tests/Unit"]
