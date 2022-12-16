@@ -1,4 +1,4 @@
-name: Build & Push Testing
+name: Testing
 on:
   push:
     branches: [ main ]
@@ -9,4 +9,4 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test
         run: |
-          docker run -it hanschrome/cmp-php-fpm-test:latest
+          docker run hanschrome/cmp-php-fpm-test:latest
